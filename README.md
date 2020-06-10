@@ -31,7 +31,8 @@ It accepts the following configuration options:
   // Required. You can find it in Rails Admin Area
   "apiKey": "...",
 
-  // Optional. Flag for static websites which want to add script for just one page and immediately enable it there.
+  // Optional. Flag for static websites which want to add script for just one page and immediately
+  // enable it there.
   "currentPage": false,
 
   // Optional. Configuration option for localStorage key, which handles check
