@@ -86,3 +86,5 @@ for adding client on your website.
 
 - automation
 - rubocop
+- css styles
+- deploy to be able to test it on a real server
