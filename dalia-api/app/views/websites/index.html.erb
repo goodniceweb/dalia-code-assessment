@@ -1,9 +1,13 @@
 <p><%= link_to('Logout', destroy_client_session_path, method: :delete) %></p>
-<h1>Websites</h1>
+<h1>Your Websites</h1>
 
-<p>Please add the following snippet to your website(-s):</p>
+<% if @websites.count.positive? %>
+  <p>Please add the following snippet to your website(-s):</p>
 
-<%= code_snippet(@client).html_safe %>
+  <%= code_snippet(@client).html_safe %>
+<% else %>
+  <h2>First of all please add your website domain</h2>
+<% end %>
 
 <table>
   <thead>
