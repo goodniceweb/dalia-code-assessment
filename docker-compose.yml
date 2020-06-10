@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  fakewebsite1:
+    image: nginx:1.19
+    ports:
+      - 8010:80
+    volumes:
+      - ./fake_website_1:/usr/share/nginx/html
+  fakewebsite2:
+    image: nginx:1.19
+    ports:
+      - 8020:80
+    volumes:
+      - ./fake_website_2:/usr/share/nginx/html
