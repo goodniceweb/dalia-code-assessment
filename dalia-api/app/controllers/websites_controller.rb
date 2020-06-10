@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+  before_action :authenticate_client!
   before_action :set_website, only: [:show, :edit, :update, :destroy]
   before_action :set_client, only: [:index, :create, :update, :destroy]
 
