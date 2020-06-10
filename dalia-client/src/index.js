@@ -29,6 +29,7 @@ class DaliaClient {
     if (e) {
       e.preventDefault();
     }
+    // TODO: Back-end URL to change when deploying
     const url = `//127.0.0.1:3000/api/v1/subscribe`;
     const method = "post";
     const body = JSON.stringify({
