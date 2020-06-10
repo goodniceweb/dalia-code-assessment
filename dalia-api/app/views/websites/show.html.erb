@@ -1,0 +1,12 @@
+<p>
+  <strong>Client:</strong>
+  <%= @website.client_id %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @website.domain %>
+</p>
+
+<%= link_to 'Edit', edit_client_website_path(@website) %> |
+<%= link_to 'Back', websites_path %>

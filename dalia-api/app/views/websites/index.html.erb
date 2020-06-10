@@ -1,0 +1,29 @@
+<p><%= link_to('Logout', destroy_client_session_path, method: :delete) %></p>
+<h1>Websites</h1>
+
+<p>Please add the following snippet to your website(-s):</p>
+
+<%= code_snippet(@client).html_safe %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Domain</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @websites.each do |website| %>
+      <tr>
+        <td><%= website.domain %></td>
+        <td><%= link_to 'Edit', edit_client_website_path(@client, website) %></td>
+        <td><%= link_to 'Destroy', [@client, website], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Website', new_client_website_path %>
